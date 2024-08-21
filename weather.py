@@ -1,8 +1,6 @@
 import streamlit as st
 import requests
-from transformers import pipeline
 
-#
 
 def get_weather(api_key, city, units):
     base_url = "http://api.openweathermap.org/data/2.5/weather"
