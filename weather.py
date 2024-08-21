@@ -46,10 +46,24 @@ def display_weather_info(weather_info, city):
     if 'snow' in weather_info['weather'].lower():
         st.info("❄️ Snowfall expected. Drive safely!")
 
-def main():
-    st.title("🌤️ Weather Information App")
+ef main():
+    st.markdown(
+        """
+        <style>
+        .main {
+            background-color: #f0f2f6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown('<div class="main">', unsafe_allow_html=True)
+    
+    st.title("🌤️ Real-Time Weather Info App 🌤️")
+    st.image("https://media.licdn.com/dms/image/D4E12AQGHerfLgiHI9Q/article-cover_image-shrink_720_1280/0/1700618292025?e=2147483647&v=beta&t=SNjgyf2IVFINmh9_5PJfF9Pbgwig5y5ytrtbw3uqD-c")
     st.write("Enter the name of any city to get the current weather information and alerts.")
-
     api_key = "7c8e37d0082cf3035641624f0d67c783"
     city = st.text_input("City name:")
     
